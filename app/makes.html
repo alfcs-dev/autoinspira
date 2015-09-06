@@ -1,0 +1,58 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Atrás</span></a></div>
+    <div class="center sliding">Marcas</div>
+    <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="makes" class="page">
+    <div class="page-content">
+      <div class="content-block-title">Selecciona una marca</div>
+      <div id="res-makes"></div>
+
+      <div class="list-block">
+        <ul>{{#each this.respuesta}}
+          <li class="accordion-item">
+            <a href="#" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title"><span><img src="http://autoinspira.com/app/images/Marcas/{{@key}}.png" height="40"/> </span> | {{@key}}</div>
+              </div>
+            </a>
+            <div class="accordion-item-content">
+              <div class="content-block">
+                <div class="list-block">
+                    <ul>{{#each this}}
+                        <li class="accordion-item">
+                        <a href="" class="item-content item-link"  data-id='{{this.id_modelo}}'>
+                          <div class="item-inner">
+                            <div class="item-title"> {{@key}}  </div>
+                          </div>              
+                        </a>
+                        <div class="accordion-item-content">
+                          <div class="content-block">
+                            <div class="list-block">
+                              <ul>{{#each this}}
+                                <li class="accordion-item">
+                                  <a href="" class="item-content item-link carro"  data-id='{{this.id_modelo}}'>
+                                  <div class="item-inner">
+                                    <div class="item-title"> Modelo: {{this.version}}  </div>
+                                  </div>              
+                                  </a>
+                                </li>{{/each}}
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </li>{{/each}}
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </li>{{/each}}
+        </ul> 
+      </div>
+
+    </div>
+  </div>
+</div>

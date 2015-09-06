@@ -1,0 +1,89 @@
+<style>.demo-card-header-pic .card-header{height:40vw;background-size:cover;background-position:center;}.facebook-card .card-header{display:block;padding:10px;}.facebook-card .facebook-avatar{float:left;}.facebook-card .facebook-name{margin-left:44px;font-size:14px;font-weight:500;}.facebook-card .facebook-date{margin-left:44px;font-size:13px;color:#8e8e93;}.facebook-card .card-footer{background:#fafafa;}.facebook-card .card-footer a{color:#81848b;font-weight:500;}.facebook-card .card-content img{display:block;}.facebook-card .card-content-inner{padding:15px 10px;}</style>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding">
+      <a href="#" class="back link"> <i class="icon icon-back"></i><span>Atrás</span></a>
+    </div>
+    <div class="center sliding">{{nombre}}</div>
+    <div class="right">
+      <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="pages">
+  <div data-page="car" class="page">
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+          <h3>{{modelo}}</h3> 
+          <!--<ul>
+          <li><b>Power</b> - {{power}} hp</li>
+          <li><b>Max speed</b> - {{speed}} km/h</li>
+          <li><b>Weight</b> - {{weight}} kg</li>
+          <li><b>Color</b> - {{color}}</li>
+          <li><b>Year</b> - {{year}}</li>
+          </ul>-->
+          <div class="card demo-card-header-pic">
+            <div style="background-image:url('http://autoinspira.com/app/{{imagen}}')" valign="bottom" class="card-header color-white no-border"></div>
+            <div class="card-content">
+              <div class="card-content-inner">
+                <p class="color-gray">Marca</p>
+                <p>Modelo: {{modelo}}</p>
+                <p id="year" data-year="{{year}}">Año: <span>{{version}}</span></p>
+                <p>Descripcion: {{descripcion}}</p>
+                <p>Medidas (m): {{medidas}}</p>
+                <p>Cilindros: {{cilindros}} / Tipo de motor: {{tipo_motor}} {{caballos}} HP</p>
+                <p>Rendimiento combinado: {{rendimiento}}</p>
+
+
+              </div>              
+
+ 
+          
+            <div class="list-block" id="opciones">
+              <ul>
+                  <!-- Single chekbox item -->
+                  {{#each especiales}}
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <!-- Checked by default -->
+                      <input type="checkbox" name="{{@key}}" value="{{this}}" />
+                      <div class="item-media">
+                        <i class="icon icon-form-checkbox"></i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title">Añadir {{@key}} </div>
+                      </div>
+                    </label>
+                  </li>
+                {{else}}
+                  <li>Sin extras</li>
+                       {{/each}}
+              </ul>
+
+              <div class="item-title label">Calcular el precio del auto con</div>
+              <div class="item-input" >
+                  <input style=" float: left; width: 75%;" type="text" name="kilometraje" id="kilometraje"> <span style="float:left; width: 5%;">km</span>
+                  <div class="button" id="calculakm" style="width: 20%;"> Calcular</div>
+              </div>
+
+            </div>
+
+     
+         <p id="precio_sug">Precio público de compra: $ <span id="prc_ch">{{precio_publico_compra}}.00</span></p>
+         <p id="precio_dis">Precio a crédito mínimo:$ <span id="prc_dis">{{precio_credito_minimo}}.00</span></p>
+         <p id="precio_rev">Precio a crédito máximo: $ <span id="prc_rev">{{precio_credito_maximo}}.00</span></p>
+              </div>
+            </div>
+          </div>
+                   
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      
