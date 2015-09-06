@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Autoinspira</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="dist/css/framework7.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <style>
+	    .demo-card-header-pic .card-header{height:40vw;background-size:cover;background-position:center;}.facebook-card .card-header{display:block;padding:10px;}.facebook-card .facebook-avatar{float:left;}.facebook-card .facebook-name{margin-left:44px;font-size:14px;font-weight:500;}.facebook-card .facebook-date{margin-left:44px;font-size:13px;color:#8e8e93;}.facebook-card .card-footer{background:#fafafa;}.facebook-card .card-footer a{color:#81848b;font-weight:500;}.facebook-card .card-content img{display:block;}.facebook-card .card-content-inner{padding:15px 10px;}
+        .loading {
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          background: url('loading.gif') no-repeat;
+          z-index: 10000;
+          background-size: 50% 50%;
+          background-position: 50% 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <!-- Views-->
+    <div  id="loading"></div>
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Autoinspira <img src="images/logo.png" width="64"/></div>
+            <!--div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div-->
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <div class="page-content">
+              <div class="content-block-title"></div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                 	Texto bienvenida 
+                </div>
+              </div>
+              <div class="list-block">
+                <a style="margin-bottom:10%; margin-top:10%;" href="rangos.html" class="button button-big button-fill color-blue">Comprar un auto</a>
+                  <a style="margin-bottom:10%; margin-top:10%;" href="marcas.html" class="button button-big button-fill color-blue">Buscar auto por marca</a>
+                  <a style="margin-bottom:10%; margin-top:10%;" href="compra.html" class="button button-big button-fill color-blue">Cuánto cuesta mi auto</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          Derechos Reservados 2015
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="dist/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script src="autoapi.js"></script>
+    <script type="text/javascript" src="my-app.js"></script>
+  </body>
+</html>
